@@ -8,7 +8,7 @@ inputs:
 outputs:
   output_var:
     description: "This is the output variable"
-    ## value: ${{ steps.set-output-var.outputs.value }}
+    value: ${{ steps.set-output-var.outputs.value }}
 
 runs:
   using: "composite"
@@ -19,7 +19,6 @@ runs:
     - name: Set output variable
       id: set-output-var
       ## run: echo "::set-output name=value::MyOutputValue" ## Old way of setting output
-      ## run: echo "value=MyOutputValue" >> $GITHUB_OUTPUT
-      run: echo "output_var=MyOutputValue" >> $GITHUB_OUTPUT
+      run: echo "value=MyOutputValue" >> $GITHUB_OUTPUT
       shell: bash
       
