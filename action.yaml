@@ -13,7 +13,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - name: Composite Action is printing out the input
+    - name: Print out the input_var
       run: echo "The input is = ${{ inputs.input_var }}"
       shell: bash
     - name: Set output variable
