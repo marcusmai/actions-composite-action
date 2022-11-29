@@ -1,0 +1,14 @@
+name: "Composite Action testing Input and Output"
+description: "This action will write out inputs and send back som outputs"
+
+
+inputs:
+  input_var:
+    description: "This is the input variable"
+
+
+runs:
+  using: "composite"
+  steps:
+    - name: Composite Action is printing out the input
+      run: echo This should be the input
