@@ -18,6 +18,7 @@ runs:
       shell: bash
     - name: Set output variable
       id: set-output-var
-      run: echo "::set-output name=value::MyOutputValue"
-      ## run: echo "{value}={MaiBackVar}" >> $GITHUB_OUTPUT
-      shell: bash
+      ## run: echo "::set-output name=value::MyOutputValue"
+      ## shell: bash
+      run: echo "{value}={"MyOutputValue"}" >> $GITHUB_OUTPUT
+      
