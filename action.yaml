@@ -18,10 +18,7 @@ runs:
       shell: bash
     - name: Set output variable
       id: set-output-var
-      ## run: echo "::set-output name=value::MyOutputValue"
+      ## run: echo "::set-output name=value::MyOutputValue" ## Old way of setting output
       run: echo "value=MyOutputValue" >> $GITHUB_OUTPUT
-      shell: bash
-    - name: test output of output_var
-      run: echo "Locally it is...... = ${{ steps.set-output-var.outputs.value }}"
       shell: bash
       
