@@ -11,4 +11,5 @@ runs:
   using: "composite"
   steps:
     - name: Composite Action is printing out the input
+      shell: bash
       run: echo This should be the input
