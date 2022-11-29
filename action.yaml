@@ -5,11 +5,18 @@ description: "This action will write out inputs and send back som outputs"
 inputs:
   input_var:
     description: "This is the input variable"
-
+outputs:
+  output_var:
+    description: "This is the output variable"
+    value: ${{ steps.set-output-var.outputs.value }}
 
 runs:
   using: "composite"
   steps:
     - name: Composite Action is printing out the input
       run: echo "The input is = ${{ inputs.input_var }}"
+      shell: bash
+    - name: Set output variable
+      it: set-output-var
+      run: echo "::set-output name=value::MaiBackVar"
       shell: bash
