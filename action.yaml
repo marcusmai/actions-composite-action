@@ -17,6 +17,6 @@ runs:
       run: echo "The input is = ${{ inputs.input_var }}"
       shell: bash
     - name: Set output variable
-      it: set-output-var
+      id: set-output-var
       run: echo "::set-output name=value::MaiBackVar"
       shell: bash
