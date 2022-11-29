@@ -11,5 +11,5 @@ runs:
   using: "composite"
   steps:
     - name: Composite Action is printing out the input
+      run: echo "The input is = ${{ inputs.input_var }}"
       shell: bash
-      run: echo The input is = ${{input.input_var}}
