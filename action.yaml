@@ -18,7 +18,7 @@ runs:
       shell: bash
     - name: Set output variable
       id: set-output-var
-      ## run: echo "::set-output name=value::MyOutputValue" ## Old way of setting output
+      ## run: echo "::set-output name=value::MyOutputValue" ## Deprecated way of setting output
       run: echo "value=MyOutputValue" >> $GITHUB_OUTPUT
       shell: bash
       
